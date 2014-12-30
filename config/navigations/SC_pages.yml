@@ -1,0 +1,48 @@
+pages: 
+  -
+    text: To Do
+    component: staff_information
+    icon: user
+  -
+    text: Inbox
+    component: staff_information
+    icon: user
+  -
+     text: Financial
+     component: field_staff
+     icon: user_suit
+     children:
+       -
+          text: Pending Invoices
+          component: field_staff
+          icon: user_suit
+  -
+    text: Patients
+    component: treatments
+    icon: user
+    children:
+      -
+        text: Medical Orders
+        component: staff_information
+        icon: user
+      -
+        text: Communication Notes
+        component: staffing_companies
+        icon: user_suit
+  -
+    text: Agency Uploads
+    component: form_library
+    icon: user_suit
+  -
+    text: Associated Health Agencies
+    component: field_staff
+    icon: user_suit
+  -
+    text: Associated Field Staffs
+    component: field_staff
+    icon: user_suit
+  -
+    text: Users
+    component: sc_users_list
+    icon: user_suit
+

@@ -1,0 +1,122 @@
+default: client_list
+pages:
+  -
+    text: Network
+    children:
+      -
+         text: Admin Users
+         component: admins
+         icon: user
+      -
+        text: Clients
+        component: client_list
+        icon: user_suit
+      -
+        text: Health Agency Details
+        component: health_agency_details
+        icon: user_suit
+      -
+        text: Field Staffs
+        component: field_staff_list
+        icon: user_suit
+  -
+    text: HR Settings
+    children:
+      -
+        text: Field Staff Credentials
+        component: fs_ct
+        icon: user
+      -
+         text: Staffing Company Credentials
+         component: sf_ct
+         icon: user
+      -
+         text: License Types
+         component: license_types_list
+         icon: user
+      -
+         text: Disciplines
+         component: disciplines
+         icon: user
+      -
+         text: Physicians
+         component: physician
+         icon: user
+  -
+     text: Visit Settings
+     children:
+      -
+         text: Visits
+         component: visit_types_explorer
+         icon: user_suit
+      -
+        text: Forms
+        component: document_definitions
+        icon: user_suit
+      -
+        text: Document Templates
+        component: document_templates
+        icon: user_suit
+      -
+         text: Document Sets
+         component: document_definition_sets
+         icon: user
+      -
+         text: Document Template Sets
+         component: document_form_template_sets
+         icon: user
+      -
+         text: Attachment Types
+         component: attachment_type_list
+         icon: user_suit
+  -
+     text: Billing Settings
+     children:
+      -
+         text: Insurance Companies
+         component: global_insurance_company
+         icon: user
+      -
+         text: Supplies
+         component: supplies_list
+         icon: user
+  -
+     text: Misc Settings
+     children:
+      -
+        text: OASIS Field Spec
+        component: oasis_field_spec_list
+        icon: user
+      -
+         text: Zip Codes
+         component: zip_code
+         icon: user
+      -
+         text: States
+         component: states
+         icon: user
+      -
+         text: Languages
+         component: languages
+         icon: user
+  -
+     text: Clinical Settings
+     children:
+      -
+         text: Medical Equipments
+         component: medical_equipments
+         icon: user
+      -
+         text: Order Types
+         component: order_types
+         icon: user
+      -
+         text: Vital Signs Reference Range
+         component: vital_signs_reference_range_list
+         icon: user_suit
+      -
+         text: Medication Library
+         component: medication
+         icon: user
+  -
+     text: Reports

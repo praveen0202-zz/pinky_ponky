@@ -1,0 +1,11 @@
+default: consltnt_claims
+pages:
+
+  -
+    text: Claims
+    component: consltnt_claims
+    icon: user_suit
+  -
+    text: Profile
+    component: consltnt_prof_explr
+    icon: user_suit

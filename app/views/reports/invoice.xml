@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invoice>
+  <created-at type="datetime">2014-12-29T17:51:33Z</created-at>
+  <customer-id type="integer">3</customer-id>
+  <id type="integer">2</id>
+  <invoice-amount type="decimal">11149.73</invoice-amount>
+  <invoice-closed type="boolean">false</invoice-closed>
+  <invoice-date type="date">2014-12-29</invoice-date>
+  <invoice-number>2</invoice-number>
+  <lock-version type="integer">0</lock-version>
+  <previous-invoice-amount type="decimal">0.0</previous-invoice-amount>
+  <previous-invoice-paid-amount type="decimal">0.0</previous-invoice-paid-amount>
+  <previous-invoice-pending-amount type="decimal">0.0</previous-invoice-pending-amount>
+  <status type="symbol">draft</status>
+  <total-invoice-amount type="decimal">11149.73</total-invoice-amount>
+  <updated-at type="datetime">2014-12-29T17:51:33Z</updated-at>
+  <bunk-name>Shree Ankanatheshwara Fuel Service Station</bunk-name>
+  <customer-name>Shaffi</customer-name>
+  <bunk-address>Maddur Main Road, Koppa, Mandya - 571425</bunk-address>
+  <contact1>9880200411, 9449078411</contact1>
+  <invoice-date-display>29/12/2014</invoice-date-display>
+  <bills type="array">
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">100376</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 553</vehicle-number>
+      <bill-date>20/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">23.89</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">1312.99</bill-amount>
+    </bill>
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">100383</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 6425</vehicle-number>
+      <bill-date>20/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">37.27</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">2048.36</bill-amount>
+    </bill>
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">100854</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 6425</vehicle-number>
+      <bill-date>23/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">34.65</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">1904.36</bill-amount>
+    </bill>
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">101013</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 553</vehicle-number>
+      <bill-date>24/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">19.36</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">1064.03</bill-amount>
+    </bill>
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">101177</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 6425</vehicle-number>
+      <bill-date>25/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">31.72</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">1743.33</bill-amount>
+    </bill>
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">101205</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 553</vehicle-number>
+      <bill-date>25/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">16.41</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">901.89</bill-amount>
+    </bill>
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">101390</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 553</vehicle-number>
+      <bill-date>26/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">21.75</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">1195.38</bill-amount>
+    </bill>
+    <bill>
+      <product-name>Diesel</product-name>
+      <bill-number type="integer">101393</bill-number>
+      <indent-number nil="true"/>
+      <vehicle-number>KA11 6425</vehicle-number>
+      <bill-date>26/12/2014</bill-date>
+      <rate type="decimal">54.96</rate>
+      <quantity type="decimal">17.82</quantity>
+      <group-column>1</group-column>
+      <bill-amount type="decimal">979.39</bill-amount>
+    </bill>
+  </bills>
+  <total-amount-in-words>eleven thousand one hundred forty-nine and seventy-three</total-amount-in-words>
+</invoice>

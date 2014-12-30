@@ -1,0 +1,34 @@
+.filter-row-grid .x-grid3-header {
+    background: #f9f9f9 url(/images/filter-row-hrow.gif) repeat-x left top;
+}
+
+.filter-row-grid .filter-row-header {
+    height: 26px;
+}
+
+table.right1 input {
+    background-image: url(/images/right1.png);
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 18px;
+}
+
+table.wrong input {
+    background-image: url(/images/wrong.png);
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 18px;
+}
+
+table.play input {
+    background-image: url(/images/play.png);
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    color: white;
+    padding-left: 18px;
+}
+
+table.no-image input {
+    background-image: none;
+}
+

@@ -1,0 +1,9 @@
+class CustomersList < Netzke::Basepack::GridPanel
+
+	def configuration
+		s = super
+		s.merge(
+			model: "Customer"
+		)
+	end
+end

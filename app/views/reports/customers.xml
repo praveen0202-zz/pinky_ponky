@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customer-information>
+	<bunk-name>Shree Ankanatheshwara Fuel Service Station</bunk-name>
+	<bunk-address1>T. Belekere, Koppa, Karnataka - 571425</bunk-address1>
+	<bunk-address2>T. Belekere, Koppa, Karnataka - 571425</bunk-address2>
+	<contact1>9880200411, 9164602461</contact1>
+	<printed-date>20/12/2014</printed-date>
+	<customers>
+		<customer>
+			<name>Ramesh</name>
+			<address>RAmesh</address>
+			<phone-number>RAmesh</phone-number>
+			<customer-balance>RAmesh</customer-balance>		
+		</customer>
+		<customer>
+			<name>Ramesh</name>
+			<address>RAmesh</address>
+			<phone-number>RAmesh</phone-number>
+			<customer-balance>RAmesh</customer-balance>		
+		</customer>
+		<customer>
+			<name>Ramesh</name>
+			<address>RAmesh</address>
+			<phone-number>RAmesh</phone-number>
+			<customer-balance>RAmesh</customer-balance>		
+		</customer>
+		<customer>
+			<name>Ramesh</name>
+			<address>RAmesh</address>
+			<phone-number>RAmesh</phone-number>
+			<customer-balance>RAmesh</customer-balance>		
+		</customer>
+		<customer>
+			<name>Ramesh</name>
+			<address>RAmesh</address>
+			<phone-number>RAmesh</phone-number>
+			<customer-balance>RAmesh</customer-balance>		
+		</customer>
+	</customers>
+</customer-information>

@@ -1,0 +1,108 @@
+default: episodes_list_explorer
+pages:
+  -
+      text: Productivity
+      children:
+        -
+         text: To Do
+         component: ha_work_queue
+         icon: user
+  -
+    text: Patients
+    children:
+      -
+        text: Patients
+        component: episodes_list_explorer
+        icon: user
+      -
+         text: Orders
+         component: order_tracking
+         icon: user
+      -
+        text: Exports
+        component: oasis_documents
+        icon: user
+  -
+    text: Network
+    children:
+      -
+        text: Field List
+        component: associated_field_staff_list
+        icon: user
+      -
+        text: Staffing Companies
+        component: staffing_company_list
+        icon: user
+      -
+        text: Physicians
+        component: physician
+        icon: user
+  -
+     text: Financial
+     component: field_staff
+     icon: user_suit
+     children:
+      -
+        text: Payroll
+        component: payrolls_explorer
+        icon: user
+      -
+        text: Claims
+        component: invoice_list
+        icon: user_suit
+      -
+        text: Insurance Companies
+        component: insurance_company
+        icon: user
+      -
+        text: Supplies
+        component: supplies_list
+        icon: user
+      -
+        text: Medicare Remittances
+        component: medicare_remittances
+        icon: user
+  -
+    text: Documents
+    children:
+      -
+        text: Uploads
+        component: form_library
+        icon: user_suit
+      -
+        text: Templates
+        component: free_form_template_list
+        icon: user_suit
+      -
+        text: Visits
+        component: visit_types_explorer
+        icon: user_suit
+      -
+        text: Forms
+        component: document_definitions
+        icon: user_suit
+  -
+    text: Admin
+    icon: user
+    children:
+      -
+        text: Settings
+        component: ha_profile_setting
+        icon: user_suit
+      -
+        text: Attachment Types
+        component: attachment_type_list
+        icon: user_suit
+      -
+        text: Order Types
+        component: order_types
+        icon: user_suit
+
+  -
+    text: Reports
+    component: reports
+    icon: user_suit
+  -
+    text: Help
+    url: "http://fasternotes.com/office-help"
+    icon: user_suit

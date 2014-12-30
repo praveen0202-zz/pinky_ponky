@@ -1,0 +1,121 @@
+pages:
+  -
+    text: Productivity
+    expanded: true
+    children:
+      -
+         text: Notes Pending Agency Review
+         leaf: true
+      -
+         text: Notes Pending Field Staff Corrections
+         leaf: true
+      -
+         text: To Do List by Field Staff
+         leaf: true
+  -
+    text: Patients
+    expanded: true
+    children:
+       -
+          text: Census
+          component: census_report_form
+          leaf: true
+       -
+          text: Expiring Authorizations
+          leaf: true
+       -
+          text: Missed Visits
+          leaf: true
+       -
+          text: Missing Frequencies
+          component: missing_frequency_form
+          leaf: true
+       -
+          text: Therapy Re- Evaluations
+          component: therapy_re_evaluation_form
+          leaf: true
+       -
+          text: OASISes by Status
+          leaf: true
+       -
+          text: Orders by Patient
+          leaf: true
+       -
+          text: Plan Of Care by Status
+          leaf: true
+       -
+          text: RC/DC Planning
+          component: rc_dc_planning_form
+          leaf: true
+       -
+          text: Reportable Vitals Tracking
+          leaf: true
+       -
+          text: Unverified Medications
+          component: unverified_medication_filter_form
+          leaf: true
+       -
+          text: Visit List
+          component: visit_list_report_form
+          leaf: true
+  -
+    text: Network
+    expanded: true
+    children:
+       -
+          text: Credentials -  Expiring, Expired and Missing
+          component: credential_report
+          leaf: true
+       -
+          text: Field Staff List
+          leaf: true
+       -
+          text: Staffing Company List
+          leaf: true
+  -
+    text: Financial
+    expanded: true
+    children:
+       -
+          text: Billed Claims
+          component: billed_claims_report_filter_options
+          leaf: true
+       -
+          text: Claims by Insurance
+          leaf: true
+       -
+          text: Claims by Status
+          leaf: true
+       -
+          text: Cost per Claim
+          leaf: true
+       -
+          text: Expiring RAPs
+          component: expiring_raps
+          leaf: true
+
+
+  -
+    text: Admin
+    expanded: true
+    children:
+       -
+          text: Annual Survey (Missouri)
+          leaf: true
+       -
+          text: Annual Utilization (California)
+          leaf: true
+       -
+          text: CAHPS
+          component: cahps_data_export
+          leaf: true
+       -
+          text: Company Profile
+          leaf: true
+       -
+          text: Cost Report
+          component: cost_report
+          leaf: true
+       -
+          text: Office Employees
+          leaf: true

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="077fd0f7-34a6-4663-984d-ee86f16d85ef">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="68"/>
+	<queryString language="xPath">
+		<![CDATA[/invoice/bills/bill]]>
+	</queryString>
+	<field name="product-name" class="java.lang.String">
+		<fieldDescription><![CDATA[product-name]]></fieldDescription>
+	</field>
+	<field name="bill-number" class="java.lang.String">
+		<fieldDescription><![CDATA[bill-number]]></fieldDescription>
+	</field>
+	<field name="indent-number" class="java.lang.String">
+		<fieldDescription><![CDATA[indent-number]]></fieldDescription>
+	</field>
+	<field name="vehicle-number" class="java.lang.String">
+		<fieldDescription><![CDATA[vehicle-number]]></fieldDescription>
+	</field>
+	<field name="bill-date" class="java.lang.String">
+		<fieldDescription><![CDATA[bill-date]]></fieldDescription>
+	</field>
+	<field name="rate" class="java.lang.String">
+		<fieldDescription><![CDATA[rate]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Float">
+		<fieldDescription><![CDATA[quantity]]></fieldDescription>
+	</field>
+	<field name="group-column" class="java.lang.String">
+		<fieldDescription><![CDATA[group-column]]></fieldDescription>
+	</field>
+	<field name="bill-amount" class="java.lang.String">
+		<fieldDescription><![CDATA[bill-amount]]></fieldDescription>
+	</field>
+	<field name="invoice-amount" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/invoice-amount]]></fieldDescription>
+	</field>
+	<field name="invoice-number" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/invoice-number]]></fieldDescription>
+	</field>
+	<field name="previous-invoice-amount" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/previous-invoice-amount]]></fieldDescription>
+	</field>
+	<field name="previous-invoice-paid-amount" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/previous-invoice-paid-amount]]></fieldDescription>
+	</field>
+	<field name="previous-invoice-pending-amount" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/previous-invoice-pending-amount]]></fieldDescription>
+	</field>
+	<field name="total-invoice-amount" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/total-invoice-amount]]></fieldDescription>
+	</field>
+	<field name="bunk-name" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/bunk-name]]></fieldDescription>
+	</field>
+	<field name="customer-name" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/customer-name]]></fieldDescription>
+	</field>
+	<field name="contact1" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/contact1]]></fieldDescription>
+	</field>
+	<field name="invoice-date-display" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/invoice-date-display]]></fieldDescription>
+	</field>
+	<field name="bunk-address" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/bunk-address]]></fieldDescription>
+	</field>
+	<field name="total-amount-in-words" class="java.lang.String">
+		<fieldDescription><![CDATA[/invoice/total-amount-in-words]]></fieldDescription>
+	</field>
+	<variable name="TOTAL_QUANTITY" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{quantity}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<group name="group_column" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{group-column}]]></groupExpression>
+		<groupHeader>
+			<band height="21">
+				<staticText>
+					<reportElement x="108" y="0" width="73" height="20" uuid="2edc8721-d9a0-4b0c-9456-1e4c4322bb87"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="242" y="0" width="56" height="20" uuid="3093f2fd-b804-4522-8c4a-78811f504937"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Indent No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="28" y="0" width="80" height="20" uuid="2fee124d-d26c-4607-8a3a-0f8ea3a3ab8b"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Product]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="472" y="0" width="83" height="20" uuid="3b957463-2da0-4c9c-b38f-8dfdb3fc6f2a"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="417" y="0" width="55" height="20" uuid="f18c93d7-a0b1-4072-aa0d-fbe4b4c3859f"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Qty]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="28" height="20" uuid="fc172838-f6bb-4d43-8020-313abbe7b6c1"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sl. No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="181" y="0" width="61" height="20" uuid="5b1e6f51-8275-496b-af38-77bcd1d5957f"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Bill No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="298" y="0" width="76" height="20" uuid="cdf39954-6130-4d3f-927b-5be413b32456"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Vehicle No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="374" y="0" width="43" height="20" uuid="77afe050-d4e2-4392-8f4c-d854de7289c4"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Rate]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="139">
+				<textField>
+					<reportElement x="151" y="57" width="91" height="20" uuid="f8b8612c-82c6-495a-b065-94416befbdfc"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{previous-invoice-paid-amount}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="151" y="37" width="91" height="20" uuid="c153abea-1a7d-48d3-be4d-7ba526b1cf04"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{previous-invoice-amount}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="245" y="52" width="199" height="20" uuid="c287fd94-b302-4d19-baea-9472708c7239"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Prev. Invoice Pending Amount :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="37" width="148" height="20" uuid="3bf52a26-b0c4-4ab2-9a9a-95502a284a0c"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[Prev. Invoice Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="57" width="148" height="20" uuid="dcbc3e4a-0b3a-40e2-979e-1a14798207b0"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[Prev. Invoice Paid Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="298" y="33" width="146" height="20" uuid="ef19a1b1-615a-4faf-817d-a3aee8a233df"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Current Invoice Bills Total :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="445" y="32" width="111" height="20" uuid="4f0a4985-f902-472f-bd11-0349a6ccdb1d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{invoice-amount}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="445" y="52" width="111" height="20" uuid="49129aa3-b910-49b1-a272-7b2b89785310"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{previous-invoice-pending-amount}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="246" y="72" width="198" height="20" uuid="d0027486-b78e-4ddd-ba9e-bfcc6a329f9a"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="445" y="72" width="111" height="20" uuid="23cf0e83-25d5-4c05-a8e4-57ccae6b5b58"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{total-invoice-amount}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="422" y="0" width="132" height="20" uuid="fe49a049-0427-4e69-a1b3-d9455deb183a"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TOTAL_QUANTITY}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="276" y="0" width="146" height="20" uuid="1ecae885-e81a-48e9-b9e3-c04b8a4dcbf2"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Quantity : ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="141" y="97" width="412" height="20" uuid="3be18577-3991-4c99-8586-61cad96ecf3e"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{total-amount-in-words}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="97" width="138" height="20" uuid="db690054-e154-418c-afbb-b823c5edd793"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[Total Amount In Words : ]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="106" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="6" width="555" height="20" uuid="58e2bb62-4dc7-4f11-a132-7ed75f13feed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bunk-name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="405" y="83" width="51" height="15" uuid="8392b50a-2abb-4de2-ba32-b3a21409378b"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="27" width="555" height="20" uuid="3b6bd17b-03b2-40fe-8650-6b84bd840252"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{bunk-address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="47" width="554" height="20" uuid="86585c43-bdda-40db-90b3-dd31276c4f54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Contact : " + $F{contact1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="80" width="335" height="20" uuid="20ee7afd-07cf-451e-b996-bf3be62db1de"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer-name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="80" width="40" height="20" uuid="2652e391-d169-4079-84d3-09fbbc96039e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="456" y="83" width="100" height="15" uuid="214b0a9f-4a36-4957-b06d-9dd8c5776d0f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice-date-display}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="67" width="98" height="15" uuid="8e537f20-bab4-4c27-a237-0d214727d341"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice-number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="405" y="68" width="51" height="15" uuid="85b32a12-da0c-4485-a652-25bba905fe2d"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. : ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<elementGroup/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="242" y="0" width="56" height="20" uuid="1acb3181-aaa0-4278-b876-83f72d7acc04"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{indent-number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="108" y="0" width="73" height="20" uuid="49950749-100a-477c-bf80-c01cc3532fc1"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill-date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="298" y="0" width="76" height="20" uuid="7284eb42-a5b9-492e-aeb7-3866ca02b2c2"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vehicle-number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="472" y="0" width="83" height="20" uuid="6a301948-5f25-4106-a025-074f21799452"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill-amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="181" y="0" width="61" height="20" uuid="1f8c504e-499b-4be9-8efa-75a32224bba9"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill-number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="28" y="0" width="80" height="20" uuid="0f4557f1-c73f-48a3-84f4-b966dc82d00a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product-name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="417" y="0" width="55" height="20" uuid="aa4cd98e-7732-4155-bd34-02f64c4052e0"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="374" y="0" width="43" height="20" uuid="0782e428-f455-4d09-a283-96722a81cd68"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="28" height="20" uuid="8c7397bf-8817-4a73-b77d-28709461a8ab"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="7" rightIndent="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="474" y="7" width="56" height="20" uuid="fd65aa64-c5f5-41e6-beb6-70e5584b5f25"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="7" width="16" height="20" uuid="5bf720a1-dbda-4d28-95cf-b8cbee69e553"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="7" width="182" height="20" uuid="879f349f-fac5-4d4c-9ebd-c5efedb322ce"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[THANK YOU FOR YOUR BUSSINESS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="3" width="552" height="1" uuid="b156e026-fcc1-4828-ba11-bfa18014bfa8"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

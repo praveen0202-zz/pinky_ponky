@@ -1,0 +1,70 @@
+default: field_staff_patient_list_explorer
+pages:
+  -
+    text: Productivity
+    children:
+      -
+        text: To Do
+        component: fs_work_queue
+        icon: user
+      -
+        text: Staffing Requests
+        component: field_staff_staffing_request_list
+        icon: user
+  -
+    text: Patients
+    children:
+      -
+        text: Patients List
+        component: field_staff_patient_list_explorer
+        icon: user
+
+  -
+    text: Network
+    children:
+      -
+        text: HHAs
+        component: field_staff_agencies_info
+        icon: user_suit
+
+  -
+    text: Financial
+    children:
+      -
+        text: Payroll
+        component: payrolls
+
+  -
+    text: Document
+    children:
+      -
+        text: Uploads
+        component: form_library
+        icon: user_suit
+      -
+        text: Templates
+        component: free_form_template_list
+        icon: user_suit
+
+
+  -
+    text: Clinical
+
+  -
+    text: Admin 
+    children:
+      -
+        text: Settings
+        component: field_staff_profile
+        icon: user_suit
+      -
+        text: Credentials
+        component: field_staff_credentials
+        icon: user
+
+  -
+    text: Reports
+  -
+    text: Help
+    url: "http://fasternotes.com/field-help"
+    icon: user_suit
