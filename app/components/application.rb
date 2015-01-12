@@ -38,6 +38,8 @@ class Application < Netzke::Basepack::Viewport
   component :customer_vehicles_list
   
   component :invoices_list
+  
+  component :sales_persons_list
 
 protected
 
@@ -75,7 +77,8 @@ protected
                 leaf("Product Rates", :product_prices, :rupee),
                 leaf("Customer Vehicles", :customer_vehicles_list, :lorry),
                 leaf("Products", :products_list, :bunk),
-                leaf("Vehicles", :vehicle_types_list, :lorry)               
+                leaf("Vehicles", :vehicle_types_list, :lorry),               
+                leaf("Sales Persons", :sales_persons_list, :users)               
               ]
     }
     out

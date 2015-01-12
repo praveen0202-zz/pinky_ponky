@@ -1,5 +1,7 @@
 Bunks::Application.routes.draw do
 
+  devise_for :users
+
   netzke
 
   match 'reports/read_generated_pdf/:file_name' => 'reports#read_generated_pdf', :as => "read_generated_pdf"
